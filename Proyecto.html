@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Proyecto</title>
+    <link rel="stylesheet" href="Proyecto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="#">
+                <img src="img/bateria.png" alt="Logo" style="height:60px;">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="objetivos.html">Objetivos</a>
+            <a href="Proyecto.html">Proyecto</a>
+        </nav>
+    </div>
+
+    <section class="content proyecto">
+        <h2 class="title"><i class="fas fa-cogs"></i> El Proyecto</h2>
+        <div class="objetivos-texto">
+            <p>
+                Este proyecto propone el desarrollo de un sistema innovador que permite cargar un teléfono móvil utilizando la energía mecánica generada al pedalear una bicicleta. La iniciativa surge de la necesidad de aprovechar fuentes de energía limpias y accesibles, transformando el movimiento en una oportunidad para generar electricidad de manera ecológica y eficiente. Así, promovemos el uso de tecnologías sostenibles y la aplicación práctica de la física en soluciones reales para la vida cotidiana.
+                <br>
+                <br>
+            </p>
+            <p><strong><i class="fas fa-tools"></i> Materiales utilizados:</strong> <br><br></p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li><i class="fas fa-car-battery"></i> USB para carros</li>
+                <li><i class="fas fa-bolt"></i> Condensador de 1000 microfaradios</li>
+                <li><i class="fas fa-mobile-alt"></i> Cable de teléfono</li>
+                <li><i class="fas fa-cogs"></i> Motor reductor</li>
+                <li><i class="fas fa-database"></i> Diodo 1N4004</li>
+                <li><i class="fas fa-dot-circle"></i> Una llanta</li>
+            </ul>
+            <p><strong><i class="fas fa-bolt"></i> Funcionamiento del sistema:</strong></p>
+            <div class="funcionamiento-centrado">
+                <p><i class="fas fa-bicycle"></i> Al pedalear, se activa un generador (motor reductor) acoplado a la rueda de la bicicleta.</p>
+                <p><i class="fas fa-bolt"></i> El generador convierte la energía mecánica en corriente eléctrica.</p>
+                <p><i class="fas fa-random"></i> La corriente pasa por un diodo 1N4004, que evita la inversión de polaridad y protege el circuito.</p>
+                <p><i class="fas fa-battery-full"></i> Un condensador de 1000 microfaradios estabiliza la corriente para asegurar una carga constante.</p>
+                <p><i class="fas fa-car-battery"></i> Finalmente, el voltaje se regula y se conecta al USB para cargar el teléfono móvil de forma segura.</p>
+            </div>
+            <p style="text-align: center;">
+                Gracias a este sistema, cada vez que pedaleas tu bicicleta, generas la energía suficiente para cargar tu dispositivo móvil. De esta manera, se fomenta el uso de fuentes alternativas de energía y se demuestra cómo la física puede integrarse en soluciones sostenibles y útiles para la vida diaria.
+            </p>
+        </div>
+    </section>
+
+    <div class="video-container">
+        <video controls>
+            <source src="video/CARGA TU TELFONO MVIL CON ENERGA MECNICA_free.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
+
+<script>
+const logo = document.querySelector('.logo');
+const navbar = document.querySelector('.navbar');
+const head = document.querySelector('.head');
+const body = document.body;
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+        logo.classList.add('hide');
+        navbar.classList.add('sticky');
+        head.classList.add('compact');
+        body.classList.add('body-padding');
+    } else {
+        logo.classList.remove('hide');
+        navbar.classList.remove('sticky');
+        head.classList.remove('compact');
+        body.classList.remove('body-padding');
+    }
+});
+</script>
+</body>
+</html>

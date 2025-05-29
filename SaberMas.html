@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales</title>
+    <link rel="stylesheet" href="objetivos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="#">
+                <img src="img/bateria.png" alt="Logo" style="height:60px;">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="objetivos.html">Objetivos</a>
+            <a href="#">Proyecto</a>
+        </nav>
+    </div>
+
+    <section class="content materiales">
+        <h2 class="title">Materiales</h2>
+        <div class="objetivos-texto">
+            <ul style="list-style: none; padding-left: 0;">
+                <li><i class="fas fa-car-battery"></i> USB para carros</li>
+                <li><i class="fas fa-bolt"></i> Condensador de 1000 microfaradios</li>
+                <li><i class="fas fa-mobile-alt"></i> Cable de teléfono</li>
+                <li><i class="fas fa-cogs"></i> Motor reductor</li>
+                <li><i class="fas fa-database"></i> Diodo 1N4004</li>
+                <li><i class="fas fa-dot-circle"></i> llanta</li>
+            </ul>
+        </div>
+        <a href="index.html" class="btn">Inicio</a>
+    </section>
+
+    <script>
+        let lastScroll = 0;
+        const logo = document.querySelector('.logo');
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 60) {
+                logo.classList.add('hide');
+                navbar.classList.add('sticky');
+            } else {
+                logo.classList.remove('hide');
+                navbar.classList.remove('sticky');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>

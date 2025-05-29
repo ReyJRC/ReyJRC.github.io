@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>PROYECTO</title>
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="#">
+                <img src="img/bateria.png" alt="Logo" style="height:60px;">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="objetivos.html">Objetivos</a>
+            <a href="proyecto.html">Proyecto</a>
+        </nav>
+    </div>
+
+    <header class="content header">
+        
+        <p>
+            <h2 class="title">BiciCargador: Energía sobre ruedas</h2>
+        </p>
+        <div class="descripcion-proyecto">
+            <p>
+                Este proyecto consiste en el diseño e implementación de un sistema que permite cargar un teléfono móvil utilizando la energía generada al pedalear una bicicleta. El objetivo es aprovechar la energía mecánica del pedaleo y convertirla en energía eléctrica mediante un generador, haciendo uso de principios de la física eléctrica.
+            </p>
+        </div>
+        <div class="btn-home">
+            <a href="SaberMas.html" class="btn">Saber más</a>
+        </div>
+    </header>
+
+    <section class="content sau">
+    <h2 class="title">Teoría</h2>
+    <div class="teoria-texto">
+        <p>
+            La teoría de nuestro proyecto se fundamenta en principios y leyes de la física que explican cómo es posible generar energía eléctrica a partir del movimiento. A continuación, se describen los conceptos clave aplicados en nuestro sistema:
+        </p>
+    </div>
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-recycle"></i>
+            <h3>Ley de la Conservación de la Energía</h3>
+            <p>
+                <strong>Principio:</strong> La energía no se crea ni se destruye, solo se transforma.<br>
+                <strong>Aplicación:</strong> La energía mecánica generada al pedalear se transforma en energía eléctrica mediante un generador (dinamo o alternador).
+            </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-magnet"></i>
+            <h3>Ley de Faraday de la Inducción Electromagnética</h3>
+            <p>
+                <strong>Enunciado:</strong> Un cambio en el flujo magnético a través de una espira induce una corriente eléctrica en ella.<br>
+                <strong>Aplicación:</strong> Al girar una rueda unida a un imán y una bobina, se genera corriente eléctrica. Esto es lo que hace un generador o dinamo.
+            </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-undo"></i>
+            <h3>Ley de Lenz</h3>
+            <p>
+                <strong>Enunciado:</strong> La corriente inducida siempre se opone al cambio que la produce.<br>
+                <strong>Aplicación:</strong> Afecta la dirección de la corriente generada en la dinamo y tiene implicaciones en el diseño del sistema para que funcione eficientemente.
+            </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bolt"></i>
+            <h3>Ley de Ohm</h3>
+            <p>
+                <strong>Fórmula:</strong> V = I &middot; R<br>
+                <strong>Aplicación:</strong> Relación entre el voltaje generado, la corriente y la resistencia del circuito de carga. Ayuda a diseñar el circuito para que sea seguro y adecuado para cargar un celular.
+            </p>
+        </div>
+        <div class="box">
+            <i class="fas fa-battery-full"></i>
+            <h3>Potencia Eléctrica</h3>
+            <p>
+                <strong>Fórmula:</strong> P = V &middot; I<br>
+                <strong>Aplicación:</strong> Permite calcular cuánta potencia estás generando y cuánta necesitas para cargar el celular (generalmente entre 5 W y 10 W para carga estándar USB).
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content about">
+    <h2 class="title">Nosotros</h2>
+    <div class="box-container">
+        <div class="box">
+            <h3>Reynier Reano</h3>
+            <p>
+                <strong>Rol:</strong> Integrante del equipo.<br>
+                <strong>Participación:</strong> Desarrollo y colaboración en el proyecto BiciCargador.<br><br>
+                Yo desarrollé la página :V
+            </p>
+        </div>
+        <div class="box">
+            <h3>Isaac Uribe</h3>
+            <p>
+                <strong>Rol:</strong> Integrante del equipo.<br>
+                <strong>Participación:</strong> Desarrollo y colaboración en el proyecto BiciCargador.
+            </p>
+        </div>
+        <div class="box">
+            <h3>Daniel Arboleda</h3>
+            <p>
+                <strong>Rol:</strong> Integrante del equipo.<br>
+                <strong>Participación:</strong> Desarrollo y colaboración en el proyecto BiciCargador.
+            </p>
+        </div>
+        <div class="box">
+            <h3>Iverson Rodriguez</h3>
+            <p>
+                <strong>Rol:</strong> Integrante del equipo.<br>
+                <strong>Participación:</strong> Desarrollo y colaboración en el proyecto BiciCargador.
+            </p>
+        </div>
+        <div class="box">
+            <h3>Alejandro Blanquice</h3>
+            <p>
+                <strong>Rol:</strong> Integrante del equipo.<br>
+                <strong>Participación:</strong> Desarrollo y colaboración en el proyecto BiciCargador.
+            </p>
+        </div>
+    </div>
+</section>
+
+<script>
+const logo = document.querySelector('.logo');
+const navbar = document.querySelector('.navbar');
+const head = document.querySelector('.head');
+const body = document.body;
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+        logo.classList.add('hide');
+        navbar.classList.add('sticky');
+        head.classList.add('compact');
+        body.classList.add('body-padding');
+    } else {
+        logo.classList.remove('hide');
+        navbar.classList.remove('sticky');
+        head.classList.remove('compact');
+        body.classList.remove('body-padding');
+    }
+});
+</script>
+</body>
+</html>

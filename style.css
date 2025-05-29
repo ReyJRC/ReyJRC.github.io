@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    transition: padding-top 0.4s;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    background: rgba(23, 23, 23, 0.8);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: height 0.4s;
+}
+
+.head.compact {
+    height: 63px;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+    transition: top 0.5s ease, background 0.3s;
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    margin-left: 60px;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.logo.hide {
+    opacity: 0;
+    transform: translateY(-40px);
+    pointer-events: none;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a {
+    display: block;
+    padding: 23px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.navbar a:hover {
+    background: #3b3b3b;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh !important;
+    background: url(img/oscar-aguilar-elias-B5p9If-Xic8-unsplash.jpg) center 5% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #9c27b0;
+    color: #fff;
+    text-decoration: none;
+    background: #9c27b0;
+}
+.btn:hover {
+    background: transparent;
+    color: #9c27b0;
+}
+.btn-home {
+    display: flex;
+}
+.btn-home a {
+    margin: 0 10px;
+}
+
+.content {
+    /* Elimina margin-top y padding-top aquí */
+}
+
+.sau {
+    padding: 40px 0;
+    background: #171717;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.box {
+    background: #23232ae6;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 32px 0 #ff66cc33, 0 2px 12px 0 #ffff9933;
+    padding: 20px 12px;
+    width: 300px;
+    min-height: 180px;
+    margin: 0;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 8px 40px 0 #ff66cc77, 0 4px 20px 0 #ffff9977;
+}
+
+.box i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    height: 3.5rem;
+    width: 3.5rem;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 60% 40%, #ff66cc 60%, #ffff99 100%);
+    color: #fff;
+    box-shadow: 0 0 16px #ff66cc88, 0 0 24px #ffff99aa;
+    text-shadow: 0 0 8px #ff66cc, 0 0 12px #ffff99;
+}
+
+.box h3 {
+    font-size: 22px;
+    margin-bottom: 14px;
+    color: #ffff99;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.box p {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+}
+.box-container .box h3 {
+    font-size: 20px;
+    color: #9c27b0;
+}
+.box-container .box p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.about {
+    background: #171717;
+}
+
+@media (max-width: 900px) {
+    .objetivos-texto {
+        max-width: 95vw;
+        padding: 24px 8px;
+    }
+    .title {
+        font-size: 36px;
+    }
+    .video-container iframe,
+    .video-container video {
+        max-width: 95vw;
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .head {
+        flex-direction: column;
+        height: 120px;
+        padding-bottom: 0;
+        padding-top: 10px;
+        transition: height 0.4s;
+    }
+    .head.compact {
+        height: 63px !important;
+        transition: height 0.4s;
+    }
+    .logo {
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: opacity 0.3s;
+    }
+    .logo img {
+        height: 40px;
+    }
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+        width: 100%;
+        background: #171717;
+        padding-bottom: 10px;
+    }
+    .navbar a {
+        padding: 12px 10px;
+        font-size: 16px;
+        width: auto;
+    }
+    .title {
+        font-size: 26px;
+        margin-bottom: 24px;
+    }
+    .objetivos-texto {
+        padding: 16px 4px;
+        font-size: 15px;
+    }
+    .objetivos-texto ul li,
+    .funcionamiento-centrado p {
+        font-size: 15px;
+        gap: 7px;
+    }
+    .objetivos-texto i,
+    .funcionamiento-centrado i {
+        font-size: 18px;
+        min-width: 20px;
+    }
+    .video-container iframe,
+    .video-container video {
+        max-width: 98vw;
+        height: 160px;
+    }
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}

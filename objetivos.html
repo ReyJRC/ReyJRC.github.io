@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetivos</title>
+    <link rel="stylesheet" href="objetivos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="#">
+                <img src="img/bateria.png" alt="Logo" style="height:60px;">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="objetivos.html">Objetivos</a>
+            <a href="#">Proyecto</a>
+        </nav>
+    </div>
+
+    <section class="content objetivos">
+        <h2 class="title">Objetivos</h2>
+        <div class="objetivos-texto">
+            <p>
+                <strong>General:</strong> Diseñar y construir un sistema que permita generar energía eléctrica mediante el pedaleo de una bicicleta, con el fin de cargar un teléfono móvil aplicando principios de la física eléctrica.
+            </p>
+            <p><strong>Específicos:</strong></p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li>
+                    <i class="fas fa-bolt"></i>
+                    Aplicar leyes y conceptos de la física eléctrica como la Ley de Faraday, la Ley de Lenz y la Ley de Ohm en el desarrollo del sistema.
+                </li>
+                <li>
+                    <i class="fas fa-bicycle"></i>
+                    Convertir la energía mecánica del pedaleo en energía eléctrica utilizando un generador (dinamo).
+                </li>
+                <li>
+                    <i class="fas fa-microchip"></i>
+                    Incorporar un circuito de rectificación y regulación de voltaje que permita cargar un celular de forma segura.
+                </li>
+                <li>
+                    <i class="fas fa-leaf"></i>
+                    Promover el uso de fuentes de energía alternativas y sostenibles en proyectos tecnológicos.
+                </li>
+                <li>
+                    <i class="fas fa-users"></i>
+                    Fomentar el trabajo en equipo, la creatividad y el aprendizaje práctico mediante la construcción de un prototipo funcional.
+                </li>
+            </ul>
+        </div>
+        <a href="index.html" class="btn">Inicio</a>
+    </section>
+
+    <script>
+        let lastScroll = 0;
+        const logo = document.querySelector('.logo');
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 60) {
+                // Bajando: ocultar logo y fijar navbar
+                logo.classList.add('hide');
+                navbar.classList.add('sticky');
+            } else {
+                // Subiendo: mostrar logo y liberar navbar
+                logo.classList.remove('hide');
+                navbar.classList.remove('sticky');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
